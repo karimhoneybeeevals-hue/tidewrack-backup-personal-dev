@@ -11,7 +11,9 @@ Covers how discovered journal entry ids persist through `GameState.save_game()` 
 godot --headless -s tests/test_journal_save.gd
 ```
 
-Exit code 0 = all checks pass. The test covers every section below.
+Exit code 0 = all checks pass. It covers sections 1, 2, 3 and 5 (the messy-array,
+non-array-string and truncated-file cases). Section 4 and the `null` / missing /
+object cases in section 5 are manual only.
 
 **Manual.** Nothing in the game calls `Journal.discover()` yet (no dialogue hook),
 so for manual runs trigger discovery temporarily, e.g. add
